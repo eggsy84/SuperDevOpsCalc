@@ -7,6 +7,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.model;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -44,6 +45,8 @@ public class CalculatorControllerIntegrationTest {
 					get("/calculator"))
 					.andExpect(status().isOk())
 					.andExpect(model().attributeExists("calculatorCommand"));
+		
+		Assert.assertFalse(true);
 		
 	}
 	
